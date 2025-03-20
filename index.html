@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <nav>
+            <ul>
+              <li><a id="homeLink" href="#home">Home</a>
+              <li><a id="aboutLink" href="#about">About</a></li>
+              <li><a id="signupLink" href="#signup">Sign Up</a></li>
+              <li><button id="signoutButton" class="signout-button" hidden>Sign Out</button></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <section id="home" class="section home" hidden>
+        <div class="container">
+            <h1>Welcome to our Simple Website</h1>
+            <p>Discover a world of simplicity and ease with our user-friendly platform.</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+    </section>
+    <section id="about" class="section about" hidden>
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a team of passionate individuals dedicated to creating innovative solutions.</p>
+        </div>
+    </section>
+    <section id="signup" class="section signup">
+        <div class="container">
+            <h2>Sign Up</h2>
+            <form id="signupForm" action="#" method="POST">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <i class="input-icon fas fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <i class="input-icon fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <i class="input-icon fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+              </div>
+                <button type="submit" class="submit-button">Sign Up</button>
+                
+            </form>
+            <div id="message"></div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
