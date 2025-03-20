@@ -1,0 +1,188 @@
+body {
+    font-family: 'Baloo 2', cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffcfdf, #fefdca);
+    background: url('https://i.pinimg.com/736x/91/52/bd/9152bd3bae5734d6fb9dafb004289466.jpg');
+    color: #333;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: none;
+    background: #ff6f61;
+    background: url('https://i.pinimg.com/736x/91/52/bd/9152bd3bae5734d6fb9dafb004289466.jpg');
+    padding: 15px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 20px 20px;
+}
+
+header.visible {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Sections */
+.section {
+    padding: 100px 20px;
+}
+
+.section h1, .section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff6f61;
+    text-shadow: 2px 2px 5px rgba(255, 87, 34, 0.2);
+}
+
+/* Welcome Section */
+#welcome {
+    background: url('https://i.imgur.com/7wURBhe.png') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#welcome h1 {
+    font-size: 3rem;
+}
+
+#welcome p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #ff6f61;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background: #ff3d00;
+    transform: scale(1.1);
+}
+
+/* Sign Up Section */
+.signup {
+    background: #ffebcd;
+    background: url('https://i.pinimg.com/736x/a5/2f/3a/a52f3ad7d4e7cbbfb59b02c03dede50d.jpg');
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ff6f61;
+    border-radius: 20px;
+    font-size: 16px;
+    background: white;
+    transition: border 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+    border: 2px solid #ff3d00;
+    outline: none;
+}
+
+/* Submit Button */
+.submit-button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:hover {
+    background: #ff3d00;
+    transform: scale(1.1);
+}
+
+/* Home & About Sections */
+#home, #about {
+    background: #d1f7ff;
+    background: url('https://i.pinimg.com/736x/91/52/bd/9152bd3bae5734d6fb9dafb004289466.jpg');
+    padding: 80px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sign Out Button */
+.signout-button {
+    background: #e74c3c;
+    background: url('hhttps://i.pinimg.com/736x/3d/fc/98/3dfc9886fc0b4e8c7445d0e3cd33d5e3.jpg');
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: 'Baloo 2', cursive;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.signout-button:hover {
+    background: #c0392b;
+    transform: scale(1.1);
+}
+
+@keyframes moveClouds {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: -1000px;
+    }
+}
