@@ -78,4 +78,102 @@ document.addEventListener('DOMContentLoaded', function () {
         signupSection.hidden = true;
         section.hidden = false;
     }
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Simulate a successful sign-up
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+    
+        // Hide the sign-up form and show the math game
+        document.getElementById('signup').hidden = true;
+        document.getElementById('mathGame').hidden = false;
+    
+        // Generate a math problem
+        generateMathProblem();
+    });
+    
+  document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('signup').hidden = true;
+    document.getElementById('mathGame').hidden = false;
+});
+
+let currentProblem = 0;
+let correctCount = 0;
+let problems = [];
+let userAnswers = [];
+
+document.getElementById('startGame').addEventListener('click', function() {
+    const difficulty = document.getElementById('difficulty').value;
+    generateProblems(difficulty);
+    document.getElementById('gameArea').hidden = false;
+    showProblem();
+});
+
+document.getElementById('submitMathAnswer').addEventListener('click', function() {
+    const userAnswer = parseFloat(document.getElementById('mathAnswer').value);
+    userAnswers.push(userAnswer);
+    if (userAnswer === problems[currentProblem].answer) {
+        correctCount++;
+        document.getElementById('mathResult').textContent = 'Correct!';
+    } else {
+        document.getElementById('mathResult').textContent = 'Incorrect.';
+    }
+    currentProblem++;
+    if (currentProblem < problems.length) {
+        showProblem();
+    } else {
+        showResults();
+    }
+});
+
+document.getElementById('playAgain').addEventListener('click', function() {
+    document.getElementById('results').hidden = true;
+    document.getElementById('mathGame').hidden = false;
+    currentProblem = 0;
+    correctCount = 0;
+    problems = [];
+    userAnswers = [];
+});
+
+function generateProblems(difficulty) {
+    problems = [];
+    for (let i = 0; i < 5; i++) { // Generate 5 problems
+        let num1, num2, operator;
+        if (difficulty === 'easy') {
+            num1 = Math.floor(Math.random() * 10) + 1;
+            num2 = Math.floor(Math.random() * 10) + 1;
+            operator = ['+', '-'][Math.floor(Math.random() * 2)];
+        } else if (difficulty === 'medium') {
+            num1 = Math.floor(Math.random() * 50) + 1;
+            num2 = Math.floor(Math.random() * 50) + 1;
+            operator = ['+', '-', '*'][Math.floor(Math.random() * 3)];
+        } else if (difficulty === 'hard') {
+            num1 = Math.floor(Math.random() * 100) + 1;
+            num2 = Math.floor(Math.random() * 100) + 1;
+            operator = ['+', '-', '*', '/'][Math.floor(Math.random() * 4)];
+        }
+        const problem = `${num1} ${operator} ${num2}`;
+        const answer = eval(problem);
+        problems.push({ problem, answer });
+    }
+}
+
+function showProblem() {
+    document.getElementById('mathProblem').textContent = problems[currentProblem].problem;
+    document.getElementById('mathAnswer').value = '';
+}
+
+function showResults() {
+    document.getElementById('gameArea').hidden = true;
+    document.getElementById('results').hidden = false;
+    document.getElementById('score').textContent = `You got ${correctCount} out of ${problems.length} correct!`;
+    let correctAnswersHTML = '<p>Correct Answers:</p>';
+    problems.forEach((problem, index) => {
+        correctAnswersHTML += `<p>${problem.problem} = ${problem.answer} (Your answer: ${userAnswers[index]})</p>`;
+    });
+    document.getElementById('correctAnswers').innerHTML = correctAnswersHTML;
+}
 });

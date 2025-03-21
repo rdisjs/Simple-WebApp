@@ -223,4 +223,109 @@ nav ul li a:hover {
         padding: 8px 16px;
         font-size: 14px;
     }
+    /* Math Game Section */
+.math-game {
+    text-align: center;
+    padding: 20px;
+    background: transparent; /* Make the background transparent */
+    border-radius: 20px;
+    box-shadow: none; /* Remove box shadow for transparency */
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.math-game h2 {
+    color: #2c3e50; /* Ensure the heading is visible */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.math-game p {
+    color: #2c3e50; /* Ensure text is visible */
+}
+
+.math-game input {
+    background: transparent; /* Semi-transparent white background for input */
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    transition: border 0.3s ease-in-out;
+}
+
+.math-game input:focus {
+    border: 2px solid #1abc9c;
+    outline: none;
+}
+
+.math-game button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.math-game button:hover {
+    background: #16a085;
+    transform: scale(1.1);
+}
+
+#mathResult {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50; /* Ensure result text is visible */
+}
+
+/* Results Section */
+.results {
+    text-align: center;
+    padding: 20px;
+    background: transparent; /* Make the background transparent */
+    border-radius: 20px;
+    box-shadow: none; /* Remove box shadow for transparency */
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.results h2 {
+    color: #2c3e50; /* Ensure the heading is visible */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.results p {
+    color: #2c3e50; /* Ensure text is visible */
+}
+
+.results #correctAnswers {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #2c3e50; /* Ensure text is visible */
+}
+
+.results button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.results button:hover {
+    background: #16a085;
+    transform: scale(1.1);
+}
 }

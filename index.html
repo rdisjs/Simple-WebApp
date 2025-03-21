@@ -33,6 +33,32 @@
             <p>We are a team of passionate individuals dedicated to creating innovative solutions.</p>
         </div>
     </section>
+    <section id="mathGame" class="section math-game" hidden>
+      <div class="container">
+          <h2>Math Game</h2>
+          <label for="difficulty">Select Difficulty:</label>
+          <select id="difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+          </select>
+          <button id="startGame">Start Game</button>
+          <div id="gameArea" hidden>
+              <p id="mathProblem"></p>
+              <input type="text" id="mathAnswer" placeholder="Your answer">
+              <button id="submitMathAnswer">Submit</button>
+              <p id="mathResult"></p>
+          </div>
+      </div>
+  </section>
+   <section id="results" class="section results" hidden>
+    <div class="container">
+        <h2>Results</h2>
+        <p id="score"></p>
+        <div id="correctAnswers"></div>
+        <button id="playAgain">Play Again</button>
+    </div>
+</section>
     <section id="signup" class="section signup">
         <div class="container">
             <h2>Sign Up</h2>
